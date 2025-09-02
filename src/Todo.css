@@ -1,0 +1,46 @@
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+body.dark-mode .todo-list li {
+  background: rgba(0,0,0,0.5);
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #4caf50;
+}
+
+.todo-list li.missed span {
+  color: #f44336;
+}
+
+.todo-list .btns button {
+  border: none;
+  border-radius: 8px;
+  padding: 5px 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.todo-list .btns .complete {
+  background: #4caf50;
+}
+
+.todo-list .btns .delete {
+  background: #f44336;
+}
