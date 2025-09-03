@@ -1,155 +1,59 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.5s ease;
-}
 
 body.light-mode {
-  background-color: #fff;
+  background: url("https://stock.adobe.com/images/landscape-wallpaper/439890152")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
 }
 
+
 body.dark-mode {
-  background-color: #111;
-  color: #f0f0f0;
+  background: url("https://t4.ftcdn.net/jpg/09/45/20/97/240_F_945209778_QNLukvfcQL0kkcClajN1FYCHb12pKUfv.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
 }
 
 .app {
-  max-width: 1100px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  backdrop-filter: blur(5px);
 }
 
-/* Background */
-.bg-image {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -2;
-  transition: all 0.5s ease;
-}
 
-/* Girl & Bulb */
-.girl-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 10;
-}
-
-.girl-img {
-  width: 120px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-
-.bulb {
-  font-size: 30px;
-  margin-top: -20px;
-  opacity: 0.6;
-  color: #ffeb3b;
-  transition: all 0.5s ease;
-}
-
-.bulb.glow {
-  opacity: 1;
-  text-shadow: 0 0 15px #ffeb3b, 0 0 30px #ffe600, 0 0 45px #ffd700;
-}
-
-/* Header */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.app-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+header h1 {
+  font-family: "Comic Sans MS", "Comic Neue", cursive;
+  font-size: 2rem;
+  margin: 0;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
 
-.streak {
-  font-weight: bold;
-  color: #ffdd00;
-}
-
-.toggle-btn {
-  padding: 5px 14px;
-  border-radius: 12px;
+header button {
+  padding: 8px 15px;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  color: #fff;
-  transition: all 0.3s ease;
+  font-size: 14px;
+  background: #ff6a00;
+  color: white;
 }
 
-.toggle-btn:hover {
-  filter: brightness(1.2);
+header button:hover {
+  opacity: 0.9;
 }
 
-/* Layout */
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.calendar-section {
-  flex: 1;
-  min-width: 300px;
-}
-
-.day-tasks {
-  margin-top: 10px;
-  padding: 10px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 12px;
-}
-
-body.dark-mode .day-tasks {
-  background: rgba(0,0,0,0.6);
-}
-
-/* Todo Section */
-.todo-section {
-  flex: 1;
-  min-width: 300px;
-  background: rgba(255,255,255,0.85);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
-
-body.dark-mode .todo-section {
-  background: rgba(0,0,0,0.5);
-}
-
-/* Input Section */
 .input-section {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .input-section input {
@@ -167,4 +71,15 @@ body.dark-mode .todo-section {
   color: white;
   padding: 10px 15px;
   cursor: pointer;
+}
+
+.streak-counter {
+  font-family: "Comic Neue", "Comic Sans MS", cursive;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.streak-counter span {
+  font-weight: bold;
+  color: #ff4500;
 }
