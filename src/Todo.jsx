@@ -7,7 +7,10 @@ function Todo({ todos, handleDelete, handleComplete }) {
       {todos.length ? (
         <ul>
           {todos.map((t, i) => (
-            <li key={i} className={t.completed ? "completed" : t.missed ? "missed" : ""}>
+            <li
+              key={i}
+              className={t.completed ? "completed" : t.missed ? "missed" : ""}
+            >
               <span className="num">{i + 1}.</span>
               <span>{t.text}</span>
               <div className="btns">
